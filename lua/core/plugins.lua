@@ -15,8 +15,6 @@ require("lazy").setup({
 
     'theprimeagen/harpoon',
     'mbbill/undotree',
-    'tpope/vim-vinegar', 
-    'nvim-tree/nvim-tree.lua',
 
     -- completion
     {
