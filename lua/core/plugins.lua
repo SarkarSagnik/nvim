@@ -4,21 +4,13 @@ require("lazy").setup({
         tag = "0.1.4",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
-
     {
-        'rose-pine/neovim',
-        as = 'rose-pine',
+        --"folke/tokyonight.nvim",
+        'shaunsingh/nord.nvim',
         config = function()
-            vim.cmd('colorscheme rose-pine')
-        end
-    },
-
-    {
-        'sainnhe/everforest',
-        config = function()
-            vim.cmd('colorscheme everforest')
-            -- Optional: Configure the variant of Everforest here if supported by Lazy
-            vim.g.everforest_background = 'soft' -- adjust as needed
+            vim.cmd('colorscheme nord')
+            -- Optional: Configure the variant of Everforest/Gruvbox/tokyonight here if supported by Lazy
+            vim.g.nord_background = 'storm' -- adjust as needed
         end,
     },
 
@@ -56,6 +48,23 @@ require("lazy").setup({
             -- Snippets
             { 'L3MON4D3/LuaSnip' },
             { 'rafamadriz/friendly-snippets' },
+        }
+    },
+
+    -- noice.nvim
+    {
+        "folke/noice.nvim",
+        event = "VeryLazy",
+        opts = {
+            -- add any options here
+        },
+        dependencies = {
+            -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+            "MunifTanjim/nui.nvim",
+            -- OPTIONAL:
+            --   `nvim-notify` is only needed, if you want to use the notification view.
+            --   If not available, we use `mini` as the fallback
+            "rcarriga/nvim-notify",
         }
     },
 
