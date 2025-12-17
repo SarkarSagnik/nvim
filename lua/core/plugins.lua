@@ -6,11 +6,12 @@ require("lazy").setup({
     },
     {
         --"folke/tokyonight.nvim",
-        'shaunsingh/nord.nvim',
+        --'shaunsingh/nord.nvim',
+        "catppuccin/nvim",
         config = function()
-            vim.cmd('colorscheme nord')
+            vim.cmd.colorscheme "catppuccin"
             -- Optional: Configure the variant of Everforest/Gruvbox/tokyonight here if supported by Lazy
-            vim.g.nord_background = 'storm' -- adjust as needed
+            --vim.g.catppuccin_background = 'Macchiato' -- adjust as needed
         end,
     },
 
