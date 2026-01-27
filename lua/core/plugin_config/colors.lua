@@ -1,6 +1,6 @@
 -- Function to set up the color scheme and remove background highlights
 function ColorMyPencils(color)
-  color = color or "catppuccin-macchiato"
+  color = color or "catppuccin"
   vim.cmd.colorscheme(color)
   -- Remove background highlight for Normal and NormalFloat
   --vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
